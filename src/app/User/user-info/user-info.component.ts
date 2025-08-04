@@ -1,10 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-user-info',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, FormsModule],
   templateUrl: './user-info.component.html',
   styleUrl: './user-info.component.css'
 })
@@ -12,6 +13,11 @@ import { Component } from '@angular/core';
 export class UserInfoComponent {
   title = 'First_Demo_App';
   count = 0
+  UserInfo : any[] = [
+    {id: 11, name: 'John Doe', age: 25, gender: 'Male', isActive:true},
+    {id: 12, name: 'Jane Smith', age: 30, gender: 'Female', isActive:false},
+    {id: 13, name: 'Bob Johnson', age: 28, gender: 'Male', isActive:true}
+  ]
 
   Counter(val: String) {
     if (val == 'plus') {

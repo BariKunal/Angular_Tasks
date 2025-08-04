@@ -6,8 +6,26 @@
 <button (click)="Counter('reset')">Reset</button>
 <button (click)="Counter('minus')">Decrement</button>
 
-<div class="container">
-    <div class="col-3 bg-primary">
-        <p>Main div</p>
-    </div>
+<div class="container col-4">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Gender</th>    
+                <th>Status</th>
+            </tr>
+        </thead>
+            <tbody>
+                <tr *ngFor="let user of UserInfo">
+
+                    <td>{{user.id}}</td>
+                    <td>{{user.name}}</td>
+                    <td>{{user.age}}</td>
+                    <td>{{user.gender}}</td>
+                    <td>{{user.isActive ? 'Active':'De-Active'}}</td>
+                </tr>
+            </tbody>
+        </table>
 </div>

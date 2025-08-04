@@ -14,9 +14,9 @@ export class UserInfoComponent {
   title = 'First_Demo_App';
   count = 0
   UserInfo : any[] = [
-    {id: 11, name: 'John Doe', age: 25, gender: 'Male', isActive:true},
-    {id: 12, name: 'Jane Smith', age: 30, gender: 'Female', isActive:false},
-    {id: 13, name: 'Bob Johnson', age: 28, gender: 'Male', isActive:true}
+    {id: 11, name: 'John Doe', age: 25, gender: 'Male', isActive:true, creditScore:40},
+    {id: 12, name: 'Jane Smith', age: 30, gender: 'Female', isActive:false, creditScore:80},
+    {id: 13, name: 'Bob Johnson', age: 28, gender: 'Male', isActive:true, creditScore:60}
   ]
 
   Counter(val: String) {

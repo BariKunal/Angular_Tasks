@@ -15,16 +15,21 @@
                 <th>Age</th>
                 <th>Gender</th>    
                 <th>Status</th>
+                <th>Credit Score</th>
             </tr>
         </thead>
             <tbody>
                 <tr *ngFor="let user of UserInfo">
-
                     <td>{{user.id}}</td>
                     <td>{{user.name}}</td>
                     <td>{{user.age}}</td>
                     <td>{{user.gender}}</td>
                     <td>{{user.isActive ? 'Active':'De-Active'}}</td>
+                    <td>
+                    <div class="progress">
+                        <div class="progress-bar" [ngStyle]="{width:user.creditScore+'%'}">{{user.creditScore}}</div>
+                    </div>
+                    </td>
                 </tr>
             </tbody>
         </table>

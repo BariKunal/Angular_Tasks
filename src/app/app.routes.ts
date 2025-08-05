@@ -8,7 +8,7 @@ export const routes: Routes = [
         component: UserInfoComponent,
     },
     { path: '', redirectTo: 'user', pathMatch: 'full' },
-    { path: '**', redirectTo: 'user' },
+    { path: '**', redirectTo: 'navbar' },
     {
         path: 'navbar',
         component: NavBarComponent,
